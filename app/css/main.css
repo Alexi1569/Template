@@ -1,3 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, b, strong {
+  font-weight: normal; }
+
+input:focus, textarea:focus, button:focus {
+  outline: 0; }
+
+ul {
+  list-style-type: none; }
+
 body {
-  display: flex;
-  font-size: 120px; }
+  font-size: 16px;
+  position: relative;
+  font-family: Arial, sans-serif; }
+
+html {
+  font-size: 16px; }
+
+html, body {
+  overflow-x: hidden; }
+
+.container {
+  width: 97%;
+  max-width: 1170px;
+  margin: 0 auto; }
