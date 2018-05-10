@@ -2,12 +2,10 @@ var gulp         = require('gulp'),
 	sass         = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync  = require('browser-sync').create(),
-	uncss        = require('gulp-uncss'),
 	pug          = require('gulp-pug'),
 	reload       = browserSync.reload,
 	cache        = require('gulp-cache'),
 	csso         = require('gulp-csso'),
-	shorthand    = require('gulp-shorthand'),
 	concat       = require('gulp-concat'),
 	uglify       = require('gulp-uglify'),
 	tinyPng      = require('gulp-tinypng'),
@@ -50,10 +48,6 @@ gulp.task('css-optimize', function() {
 		'app/libs/**/*.css'
 	])
 		.pipe(concat('main.min.css'))
-		.pipe(uncss({
-			html: ['build/index.html', 'build/layout/**/*.html']
-		}))
-		.pipe(shorthand())
 		.pipe(autoprefixer({
 			cascade: false
 		}))
