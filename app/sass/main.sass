@@ -1,10 +1,25 @@
-@import _variables
-@import _default
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+a
+	text-decoration: none
+
+input:focus, textarea:focus, button:focus, a:focus
+	outline: 0
+
+ul
+	list-style-type: none
 
 body
 	font-size: 16px
-	position: relative
 	font-family: Arial, sans-serif
+	background-color: #1e2025
+
+#page
+	min-height: 100vh
+	position: relative
 
 html
 	font-size: 16px
@@ -12,7 +27,111 @@ html
 html, body
 	overflow-x: hidden
 
+button
+	cursor: pointer
+
+textarea
+	resize: none
+	overflow-y: hidden
+
+input,
+textarea
+	font-family: sans-serif
+	font-size: 11px
+	color: #333
+
+.slick-slide:focus
+	outline: 0
+
+.slick-list .slick-track
+	margin-left: 0
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder
+	font-size: 11px
+	color: #999999
+	font-family: Arial
+
+input::-moz-placeholder,
+textarea::-moz-placeholder
+	font-size: 11px
+	color: #999999
+	font-family: Arial
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder
+	font-size: 11px
+	color: #999999
+	font-family: Arial
+
+input:-moz-placeholder,
+textarea:-moz-placeholder
+	font-size: 11px
+	color: #999999
+	font-family: Arial
+
+input[type="submit"]
+	cursor: pointer
+
 .container
-	width: 97%
+	width: 100%
 	max-width: 1170px
+	padding-left: 15px
+	padding-right: 15px
 	margin: 0 auto
+
+.inline-flex
+	display: -webkit-inline-flex
+	display: -moz-inline-flex
+	display: -ms-inline-flex
+	display: -o-inline-flex
+	display: inline-flex
+
+.flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.ai-s
+	align-items: stretch
+
+.ai-c
+	align-items: center
+
+.ai-fs
+	align-items: flex-start
+
+.ai-b
+	align-items: baseline
+
+.ai-fe
+	align-items: flex-end
+
+.jc-sb
+	justify-content: space-between
+
+.jc-fe
+	justify-content: flex-end
+
+.jc-fs
+	justify-content: flex-start
+
+.jc-c
+	justify-content: center
+
+.fd-c
+	flex-direction: column
+
+.fw-w
+	flex-wrap: wrap
+
+.btn
+	display: block
+
+footer
+	position: absolute
+	left: 0
+	bottom: 0
+	right: 0

@@ -2,10 +2,8 @@ var gulp         = require('gulp'),
 	sass         = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync  = require('browser-sync').create(),
-	pug          = require('gulp-pug'),
 	reload       = browserSync.reload,
 	cache        = require('gulp-cache'),
-	csso         = require('gulp-csso'),
 	concat       = require('gulp-concat'),
 	uglify       = require('gulp-uglify'),
 	tinyPng      = require('gulp-tinypng'),
@@ -26,16 +24,23 @@ gulp.task('sass', function() {
 		'app/sass/**/*.sass',
 		'!app/sass/**/_*.sass'
 	])
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({
+			outputStyle: 'expanded'
+		}).on('error', sass.logError))
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.stream());
 });
 
-gulp.task('watch', ['sass', 'pug', 'pug-index', 'js-optimize', 'css-optimize','tiny-png', 'fonts', 'browser-sync'], function() {
+gulp.task('html', function() {
+	return gulp.src('app/**/*.html')
+		.pipe(gulp.dest('build'));
+})
+
+gulp.task('watch', ['sass', 'js-optimize', 'html', 'css-optimize','tiny-png', 'fonts', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['app/css/**/*.css', 'app/libs/**/*.css'], ['css-optimize']);
-	gulp.watch('app/pug/**/*.pug', ['pug', 'pug-index', 'css-optimize']);
-	gulp.watch(['build/index.html', 'build/layout/**/*.html']).on('change', reload);
+	gulp.watch(['build/**/*.html']).on('change', reload);
+	gulp.watch('app/**/*.html', ['html']);
 	gulp.watch(['app/js/**/*.js', 'app/libs/**/*.js'], ['js-optimize']);
 	gulp.watch('app/img/*', ['tiny-png']);
 	gulp.watch('app/fonts/*', ['fonts']);
@@ -49,12 +54,8 @@ gulp.task('css-optimize', function() {
 	])
 		.pipe(concat('main.min.css'))
 		.pipe(autoprefixer({
+			browsers: ['cover 99.5%'],
 			cascade: false
-		}))
-		.pipe(csso({
-			restructure: false,
-			sourceMap: true,
-			debug: true
 		}))
 		.pipe(gulp.dest('build/css'))
 		.pipe(browserSync.stream());
@@ -73,35 +74,12 @@ gulp.task('clear', function() {
 	cache.clearAll()
 });
 
-gulp.task('pug', function() {
-	return gulp.src([
-		'app/pug/**/*.pug',
-		'!app/pug/index.pug',
-		'!app/pug/**/_*.pug'
-	])
-		.pipe(pug({
-			compileDebug: true
-		}))
-		.pipe(gulp.dest('build/layout'));
-});
-
-gulp.task('pug-index', function() {
-	return gulp.src([
-		'app/pug/index.pug'
-	])
-		.pipe(pug({
-			compileDebug: true
-		}))
-		.pipe(gulp.dest('build'))
-})
-
 gulp.task('js-optimize', function() {
 	return gulp.src([
 		'app/js/**/*.js',
 		'app/libs/**/*.js'
 	])
 		.pipe(concat('main.min.js'))
-		.pipe(uglify())
 		.pipe(gulp.dest('build/js'))
 		.pipe(browserSync.stream());
 });
