@@ -38,9 +38,9 @@ $(document).ready(function($) {
 	if ($('.styled-select').length) {
 		$('.styled-select').each(function() {
       $(this).selectmenu({
-      	appendTo: '.form-group',
+      	appendTo: '.form__group',
         position: {
-            of: $(this).closest('.form-group'),
+            of: $(this).closest('.form__group-input'),
             collision: 'flipfit',
             my: 'left-50% top+10',
             at: 'center top+40',
