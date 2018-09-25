@@ -4,13 +4,10 @@ $(document).ready(function($) {
 
 	$(window).resize(function() {
 		windowWidth = $(window).width();
-		alignFooter();
 	})
 
 	window.onload = function () {
-		if ($('.footer').length) {
-			alignFooter();
-		}
+		
 	}
 
 	$(document).on('click touchstart', function(event) {
@@ -26,41 +23,63 @@ $(document).ready(function($) {
 	    $('body').removeClass('touch-device');
 	}
 
-		if ($('.styled-select').length) {
-			$('.styled-select').each(function() {
-        $(this).selectmenu({
-        	appendTo: '.modal-inner',
-          position: {
-              of: $(this).closest('.form-group'),
-              collision: 'flipfit',
-              my: 'left-50% top+10',
-              at: 'center top+40',
-          }
-        });
-	    });
-		}
+	$('.only-text-input').bind('keyup blur',function(){
+    var node = $(this);
+    node.val(node.val().replace(/[^a-zA-Zа-яА-Я]/g,'') ); }
+  );
 
-		if ($('#mobile-menu').length) {
-			$('#mobile-menu').mmenu({
-				navbars: {
-					content : [ "close" ],
-				},
-				navbar: {
-					title: 'Frime'
-				}
-			});
-		}
+  $('.masked-phone').mask(
+    '+99 (999) 999-99-99',
+    {
+        autoclear: false,
+    }
+  );
 
-	function alignFooter() {
-		var h = $('.footer').outerHeight();
-
-		$('#page').css({
-			'padding-bottom': h + 'px',
-		});
+	if ($('.styled-select').length) {
+		$('.styled-select').each(function() {
+      $(this).selectmenu({
+      	appendTo: '.form-group',
+        position: {
+            of: $(this).closest('.form-group'),
+            collision: 'flipfit',
+            my: 'left-50% top+10',
+            at: 'center top+40',
+        }
+      });
+    });
 	}
 
+	if ($('#mobile-menu').length) {
+		$('#mobile-menu').mmenu({
+      extensions: [ 
+      	"position-bottom", 
+      	"fullscreen", 
+      	"listview-50", 
+      	"fx-panels-slide-up", 
+      	"fx-listitems-drop",
+      	 "border-offset"
+      ],
+      navbar: {
+          title: ""
+      },
+      navbars: [
+      	{
+          height: 2,
+          contenе: [
+            '',
+          ]
+        }, 
+        {
+          content : ["prev","title", "close"]
+        }
+      ]
+	    }, 
+  { });
+	}
+
+
 	setTimeout(function() {
-		$('#mobile-menu').css({
+		$('.mobile-menu').css({
 			'opacity': 1,
 		})
 	}, 1000);

@@ -36,7 +36,7 @@ gulp.task('html', function() {
 		.pipe(gulp.dest('build'));
 })
 
-gulp.task('watch', ['sass', 'js-optimize', 'html', 'css-optimize','tiny-png', 'fonts', 'browser-sync'], function() {
+gulp.task('watch', ['sass', 'html', 'js-optimize', 'css-optimize','tiny-png', 'fonts', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['app/css/**/*.css', 'app/libs/**/*.css'], ['css-optimize']);
 	gulp.watch(['build/**/*.html']).on('change', reload);
@@ -46,13 +46,21 @@ gulp.task('watch', ['sass', 'js-optimize', 'html', 'css-optimize','tiny-png', 'f
 	gulp.watch('app/fonts/*', ['fonts']);
 });
 
+gulp.task('js-optimize', function() {
+	return gulp.src([
+		'app/libs/**/*.js',
+		'app/js/**/*.js',
+	])
+		.pipe(gulp.dest('build/js'))
+		.pipe(browserSync.stream());
+});
+
 gulp.task('css-optimize', function() {
 	return gulp.src([
 		'app/fonts/**/*.css',
 		'app/css/**/*.css',
 		'app/libs/**/*.css'
 	])
-		.pipe(concat('main.min.css'))
 		.pipe(autoprefixer({
 			browsers: ['cover 99.5%'],
 			cascade: false
@@ -74,19 +82,6 @@ gulp.task('clear', function() {
 	cache.clearAll()
 });
 
-gulp.task('js-optimize', function() {
-	return gulp.src([
-		'app/libs/jquery-ui.min.js',
-		'app/libs/jquery.mmenu.all.js',
-		'app/libs/jquery.modal.min.js',
-		'app/libs/slick.min.js',
-		'app/js/main.js',
-	])
-		.pipe(concat('main.min.js'))
-		.pipe(gulp.dest('build/js'))
-		.pipe(browserSync.stream());
-});
-
 gulp.task('tiny-png', function() {
 	return gulp.src('app/img/*')
 		.pipe(clean({force: true}))
@@ -95,3 +90,4 @@ gulp.task('tiny-png', function() {
 });
 
 gulp.task('default', ['watch']);
+
