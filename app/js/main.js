@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
   $('.masked-phone').mask(
     '+99 (999) 999-99-99',
     {
-        autoclear: false,
+        autoclear: false
     }
   );
 
@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
             of: $(this).closest('.form__group-input'),
             collision: 'flipfit',
             my: 'left-50% top+10',
-            at: 'center top+40',
+            at: 'center top+40'
         }
       });
     });
@@ -82,8 +82,8 @@ jQuery(document).ready(function($) {
       navbars: [
       	{
           height: 2,
-          contenе: [
-            '',
+          content: [
+            ''
           ]
         }, 
         {
@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
 
 	setTimeout(function() {
 		$('.mobile-menu').css({
-			'opacity': 1,
+			'opacity': 1
 		})
 	}, 1000);
 
