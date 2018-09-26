@@ -1,14 +1,14 @@
 ﻿;
-$(document).ready(function($) {
+jQuery(document).ready(function($) {
 	var windowWidth = $(window).width();
 
 	$(window).resize(function() {
 		windowWidth = $(window).width();
-	})
+	});
 
-	window.onload = function () {
-		
-	}
+  $(window).on('load', function() {
+
+  });
 
 	$(document).on('click touchstart', function(event) {
 		if ((!$(event.target.closest('.catalog__filter-content')).is(".catalog__filter-content")) && $('.catalog__filter-content').hasClass('active') && (!$(event.target.closest('.catalog__filter-top ')).is(".catalog__filter-top "))) {
