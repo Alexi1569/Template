@@ -9,7 +9,6 @@
 	tinyPng      = require('gulp-tinypng'),
 	clean        = require('gulp-clean');
 
-
 gulp.task('browser-sync', function() {
 	browserSync.init({
 		notify: false,
