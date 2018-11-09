@@ -1,4 +1,4 @@
-﻿var gulp         = require('gulp'),
+﻿var gulp       = require('gulp'),
 	sass         = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync  = require('browser-sync').create(),
@@ -40,15 +40,27 @@ gulp.task('watch', ['sass', 'html', 'js-optimize', 'css-optimize','tiny-png', 'f
 	gulp.watch(['app/css/**/*.css', 'app/libs/**/*.css'], ['css-optimize']);
 	gulp.watch(['build/**/*.html']).on('change', reload);
 	gulp.watch('app/**/*.html', ['html']);
-	gulp.watch(['app/js/**/*.js', 'app/libs/**/*.js'], ['js-optimize']);
+	gulp.watch(['app/js/**/*.js', 'app/libs/**/*.js'], ['js-libs-optimize, js-optimize']);
 	gulp.watch('app/img/*', ['tiny-png']);
 	gulp.watch('app/fonts/*', ['fonts']);
 });
 
-gulp.task('js-optimize', function() {
+gulp.task('js-libs-optimize', function() {
 	return gulp.src([
 		'app/libs/**/*.js',
 		'app/js/**/*.js',
+		'!app/js/jquery-3.3.1.min.js',
+		'!app/js/main.js'
+	])
+		.pipe(concat('build.min.js'))
+		.pipe(gulp.dest('build/js'))
+		.pipe(browserSync.stream());
+});
+
+gulp.task('js-optimize', function() {
+	return gulp.src([
+		'app/js/jquery-3.3.1.min.js',
+		'app/js/main.js'
 	])
 		.pipe(gulp.dest('build/js'))
 		.pipe(browserSync.stream());
@@ -56,14 +68,16 @@ gulp.task('js-optimize', function() {
 
 gulp.task('css-optimize', function() {
 	return gulp.src([
-		'app/fonts/**/*.css',
-		'app/css/**/*.css',
-		'app/libs/**/*.css'
+		'app/libs/jquery.modal.min.css',
+		'app/fonts/fonts.css',
+		'app/libs/flipclock.css',
+		'app/css/main.css'
 	])
 		.pipe(autoprefixer({
 			browsers: ['cover 99.5%'],
 			cascade: false
 		}))
+		.pipe(concat('main.min.css'))
 		.pipe(gulp.dest('build/css'))
 		.pipe(browserSync.stream());
 });
