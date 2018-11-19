@@ -40,7 +40,7 @@ gulp.task('watch', ['sass', 'html', 'js-optimize', 'css-optimize','tiny-png', 'f
 	gulp.watch(['app/css/**/*.css', 'app/libs/**/*.css'], ['css-optimize']);
 	gulp.watch(['build/**/*.html']).on('change', reload);
 	gulp.watch('app/**/*.html', ['html']);
-	gulp.watch(['app/js/**/*.js', 'app/libs/**/*.js'], ['js-libs-optimize, js-optimize']);
+	gulp.watch(['app/js/**/*.js', 'app/libs/**/*.js'], ['js-libs-optimize', 'js-optimize']);
 	gulp.watch('app/img/*', ['tiny-png']);
 	gulp.watch('app/fonts/*', ['fonts']);
 });
@@ -49,7 +49,7 @@ gulp.task('js-libs-optimize', function() {
 	return gulp.src([
 		'app/libs/**/*.js',
 		'app/js/**/*.js',
-		'!app/js/jquery-3.3.1.min.js',
+		'!app/libs/jquery-3.3.1.min.js',
 		'!app/js/main.js'
 	])
 		.pipe(concat('build.min.js'))
@@ -59,7 +59,7 @@ gulp.task('js-libs-optimize', function() {
 
 gulp.task('js-optimize', function() {
 	return gulp.src([
-		'app/js/jquery-3.3.1.min.js',
+		'app/libs/jquery-3.3.1.min.js',
 		'app/js/main.js'
 	])
 		.pipe(gulp.dest('build/js'))
@@ -68,10 +68,9 @@ gulp.task('js-optimize', function() {
 
 gulp.task('css-optimize', function() {
 	return gulp.src([
-		'app/libs/jquery.modal.min.css',
-		'app/fonts/fonts.css',
-		'app/libs/flipclock.css',
-		'app/css/main.css'
+		'app/libs/**/*.css',
+		'app/fonts/**/*.css',
+		'app/css/**/*.css'
 	])
 		.pipe(autoprefixer({
 			browsers: ['cover 99.5%'],
