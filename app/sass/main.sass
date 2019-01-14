@@ -3,20 +3,31 @@
 	padding: 0
 	appearance: none
 	box-sizing: border-box
+	&:focus
+		outline: none
 
 a
 	text-decoration: none
+	color: inherit
 
 ul
 	list-style-type: none
 
 body
 	font-size: 16px
-	font-family: sans-serif
+	font-family: Arial, sans-serif
 
-#page
+.header,
+.main,
+.footer
+	width: 100%
+
+.page
 	min-height: 100vh
 	position: relative
+
+.main
+	flex: 1
 
 html
 	font-size: 16px
@@ -40,11 +51,23 @@ textarea
 	outline: 0
 
 input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder
+	font-size: 11px
+	color: #999999
+	font-family: Arial
+
 input::-moz-placeholder,
-textarea::-moz-placeholder,
+textarea::-moz-placeholder
+	font-size: 11px
+	color: #999999
+	font-family: Arial
+
 input:-ms-input-placeholder,
-textarea:-ms-input-placeholder,
+textarea:-ms-input-placeholder
+	font-size: 11px
+	color: #999999
+	font-family: Arial
+
 input:-moz-placeholder,
 textarea:-moz-placeholder
 	font-size: 11px
@@ -93,6 +116,9 @@ input[type="submit"]
 .jc-sb
 	justify-content: space-between
 
+.jc-sa
+	justify-content: space-around
+
 .jc-fe
 	justify-content: flex-end
 
@@ -120,11 +146,12 @@ input[type="submit"]
 
 .form
 	&__group
+		&.has--error
+			.form__group-message
+				display: inline-block
 		&-input
 			display: block
 		&-message
 			font-size: .8em
-		&-success
-			color: green
-		&-error
 			color: red
+			display: none

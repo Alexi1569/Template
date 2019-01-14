@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bed6f87e-3234-480e-a4e0-5284e600dc4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/main.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,107 +26,13 @@
     <expand />
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1136458974">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="5" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="16" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="html" value="8" />
-          <entry key="js" value="10" />
-          <entry key="json" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="8" />
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="10" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="gitignore" value="10" />
-          <entry key="html" value="103" />
-          <entry key="js" value="253" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="103" />
-          <entry key="JavaScript" value="253" />
-          <entry key="PLAIN_TEXT" value="10" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1620343">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="js" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JavaScript" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="9" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+        <entry file="file://D:/xampp/htdocs/teplo/template/app/sass/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Projects/suns-land/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-660" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="15" column="203" selection-start-line="15" selection-start-column="203" selection-end-line="15" selection-end-column="203" />
+            <state relative-caret-position="-7120">
+              <caret line="163" selection-start-line="163" selection-end-line="164" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -133,17 +40,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="140">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/css/main.css">
+        <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
-              <caret line="140" column="26" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
+            <state relative-caret-position="260">
+              <caret line="79" column="10" lean-forward="true" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -159,80 +66,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
+        <option value="$PROJECT_DIR$/app/sass/main.sass" />
         <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <gulpfiles>
-      <GulpfileState>
-        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
-        <tasks>
-          <GulpTaskState>
-            <task-name>browser-sync</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>sass</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>html</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <dependencies>
-              <dependency value="sass" />
-              <dependency value="html" />
-              <dependency value="js-optimize" />
-              <dependency value="css-optimize" />
-              <dependency value="tiny-png" />
-              <dependency value="fonts" />
-              <dependency value="browser-sync" />
-            </dependencies>
-            <task-name>watch</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>js-optimize</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>css-optimize</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>fonts</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>clear</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>tiny-png</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <dependencies>
-              <dependency value="watch" />
-            </dependencies>
-            <task-name>default</task-name>
-          </GulpTaskState>
-        </tasks>
-      </GulpfileState>
-    </gulpfiles>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="100" />
@@ -291,6 +134,12 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Template" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -306,7 +155,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="D:/xampp/htdocs/m1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -324,7 +173,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
@@ -360,12 +209,14 @@
       <workItem from="1537961063373" duration="83000" />
       <workItem from="1537961168112" duration="896000" />
       <workItem from="1538049519152" duration="701000" />
-      <workItem from="1542610579807" duration="105000" />
+      <workItem from="1542610579807" duration="573000" />
+      <workItem from="1542611191382" duration="37000" />
+      <workItem from="1547453912875" duration="274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9440000" />
+    <option name="totallyTimeSpent" value="10219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,7 +231,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.13272922" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.13486141" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.19349681" />
       <window_info id="Gulp" order="2" sideWeight="0.50085473" side_tool="true" weight="0.19349681" />
       <window_info id="npm" order="3" sideWeight="0.50085473" side_tool="true" weight="0.19349681" />
@@ -401,14 +252,11 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="Remote Host" order="4" visible="true" weight="0.21002132" />
+      <window_info anchor="right" id="Remote Host" order="4" visible="true" weight="0.13646056" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -441,13 +289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="140" column="26" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
@@ -467,10 +308,31 @@
         <state relative-caret-position="-660" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="140" column="26" selection-start-line="140" selection-start-column="26" selection-end-line="140" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/xampp/htdocs/teplo/template/app/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7120">
+          <caret line="163" selection-start-line="163" selection-end-line="164" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="79" column="10" lean-forward="true" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="140">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
