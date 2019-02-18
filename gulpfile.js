@@ -6,6 +6,7 @@
 	cache        = require('gulp-cache'),
 	concat       = require('gulp-concat'),
 	uglify       = require('gulp-uglify'),
+	pug       = require('gulp-pug'),
 	tinyPng      = require('gulp-tinypng'),
 	clean        = require('gulp-clean');
 
@@ -30,16 +31,19 @@ gulp.task('sass', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('html', function() {
-	return gulp.src('app/**/*.html')
+gulp.task('pug', function() {
+	return gulp.src('app/**/*.pug')
+		.pipe(pug({
+			
+		}))
 		.pipe(gulp.dest('build'));
 });
 
-gulp.task('watch', ['sass', 'html', 'js-optimize', 'css-optimize','tiny-png', 'fonts', 'browser-sync'], function() {
+gulp.task('watch', ['sass', 'pug', 'js-optimize', 'css-optimize','tiny-png', 'fonts', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['app/css/**/*.css', 'app/libs/**/*.css'], ['css-optimize']);
 	gulp.watch(['build/**/*.html']).on('change', reload);
-	gulp.watch('app/**/*.html', ['html']);
+	gulp.watch('app/**/*.pug', ['pug']);
 	gulp.watch(['app/js/**/*.js', 'app/libs/**/*.js'], ['js-libs-optimize', 'js-optimize']);
 	gulp.watch('app/img/*', ['tiny-png']);
 	gulp.watch('app/fonts/*', ['fonts']);
