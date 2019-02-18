@@ -7,6 +7,7 @@
 	concat       = require('gulp-concat'),
 	uglify       = require('gulp-uglify'),
 	pug       = require('gulp-pug'),
+	htmlBeautify       = require('gulp-html-beautify'),
 	tinyPng      = require('gulp-tinypng'),
 	clean        = require('gulp-clean');
 
@@ -32,18 +33,21 @@ gulp.task('sass', function() {
 });
 
 gulp.task('pug', function() {
-	return gulp.src('app/**/*.pug')
+	return gulp.src('app/pug/views/**/*.pug')
 		.pipe(pug({
 			
 		}))
-		.pipe(gulp.dest('build'));
+		.pipe(htmlBeautify({
+			indentSize: 2
+		}))
+		.pipe(gulp.dest('build/'));
 });
 
 gulp.task('watch', ['sass', 'pug', 'js-optimize', 'css-optimize','tiny-png', 'fonts', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['app/css/**/*.css', 'app/libs/**/*.css'], ['css-optimize']);
 	gulp.watch(['build/**/*.html']).on('change', reload);
-	gulp.watch('app/**/*.pug', ['pug']);
+	gulp.watch('app/pug/**/*.pug', ['pug']);
 	gulp.watch(['app/js/**/*.js', 'app/libs/**/*.js'], ['js-libs-optimize', 'js-optimize']);
 	gulp.watch('app/img/*', ['tiny-png']);
 	gulp.watch('app/fonts/*', ['fonts']);
