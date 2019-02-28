@@ -7,8 +7,6 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='css/main.min.css')
     title Title
   body
-    nav#mobile-menu.mobile-menu
-      ul
     #page.page.flex.fd-c.jc-sb
       block header
 
@@ -17,6 +15,13 @@ html(lang='en')
       footer.footer
         p footer
 
+
+
+    svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink").hidden
+      symbol(id="" viewBox="")
+
+    nav#mobile-menu.mobile-menu.hidden
+      ul
 
     script(src='js/jquery-3.3.1.min.js')
     script(src='js/build.min.js')

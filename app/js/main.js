@@ -4,6 +4,8 @@ jQuery(document).ready(function ($) {
   var mobileMenu = $('#mobile-menu');
   var styledSelect = $('.styled-select');
 
+  setTimeout(() => console.log(1))
+
   $(window).resize(function () {
     windowWidth = $(window).width();
   });
@@ -96,13 +98,5 @@ jQuery(document).ready(function ($) {
       },
       {});
   }
-
-
-  setTimeout(function () {
-    $(mobileMenu).css({
-      'opacity': 1
-    })
-  }, 1000);
-
 
 });

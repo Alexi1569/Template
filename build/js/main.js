@@ -1,22 +1,21 @@
+"use strict";
+
 ;
 jQuery(document).ready(function ($) {
   var windowWidth = $(window).width();
   var mobileMenu = $('#mobile-menu');
   var styledSelect = $('.styled-select');
-
+  setTimeout(function () {
+    return console.log(1);
+  });
   $(window).resize(function () {
     windowWidth = $(window).width();
   });
-
-  $(window).on('load', function () {
-
-  });
-
+  $(window).on('load', function () {});
   $(document).on('click touchstart', function (event) {
-    if ((!$(event.target.closest('.catalog__filter-content')).is(".catalog__filter-content")) && $('.catalog__filter-content').hasClass('active') && (!$(event.target.closest('.catalog__filter-top ')).is(".catalog__filter-top "))) {
+    if (!$(event.target.closest('.catalog__filter-content')).is(".catalog__filter-content") && $('.catalog__filter-content').hasClass('active') && !$(event.target.closest('.catalog__filter-top ')).is(".catalog__filter-top ")) {
       $(".catalog__filter-content").removeClass('active');
     }
-
   });
 
   if ("ontouchstart" in document.documentElement) {
@@ -26,17 +25,12 @@ jQuery(document).ready(function ($) {
   }
 
   $('.only-text-input').bind('keyup blur', function () {
-      var node = $(this);
-      node.val(node.val().replace(/[^a-zA-Zа-яА-Я]/g, ''));
-    }
-  );
-
-  $('.masked-phone').mask(
-    '+99 (999) 999-99-99',
-    {
-      autoclear: false
-    }
-  );
+    var node = $(this);
+    node.val(node.val().replace(/[^a-zA-Zа-яА-Я]/g, ''));
+  });
+  $('.masked-phone').mask('+99 (999) 999-99-99', {
+    autoclear: false
+  });
 
   (function () {
     var acc = document.getElementsByClassName("faq__item-question");
@@ -46,6 +40,7 @@ jQuery(document).ready(function ($) {
       acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
+
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
@@ -71,38 +66,16 @@ jQuery(document).ready(function ($) {
 
   if ($(mobileMenu).length) {
     $(mobileMenu).mmenu({
-        extensions: [
-          "position-bottom",
-          "fullscreen",
-          "listview-50",
-          "fx-panels-slide-up",
-          "fx-listitems-drop",
-          "border-offset"
-        ],
-        navbar: {
-          title: ""
-        },
-        navbars: [
-          {
-            height: 2,
-            content: [
-              ''
-            ]
-          },
-          {
-            content: ["prev", "title", "close"]
-          }
-        ]
+      extensions: ["position-bottom", "fullscreen", "listview-50", "fx-panels-slide-up", "fx-listitems-drop", "border-offset"],
+      navbar: {
+        title: ""
       },
-      {});
+      navbars: [{
+        height: 2,
+        content: ['']
+      }, {
+        content: ["prev", "title", "close"]
+      }]
+    }, {});
   }
-
-
-  setTimeout(function () {
-    $(mobileMenu).css({
-      'opacity': 1
-    })
-  }, 1000);
-
-
 });
