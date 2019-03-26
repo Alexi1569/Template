@@ -1,144 +1,214 @@
-﻿body
-	font-size: 16px
-	font-family: Arial, sans-serif
+﻿$tr: .25s all ease-in
+$accent: red
+
+*,
+*:before,
+*:after
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  appearance: none
+  &:focus
+    outline: none
+
+select
+  display: none
+
+ul
+  list-style-type: none
+
+body
+  font-size: 16px
+  font-family: sans-serif
+  font-feature-settings: 'kern'
+  -webkit-font-smoothing: antialiased
+
+a
+  color: $accent
+  transition: $tr
 
 .header,
 .main,
 .footer
-	width: 100%
+  width: 100%
 
 .hidden
-	display: none !important
+  display: none !important
 
 .page
-	min-height: 100vh
-	position: relative
+  min-height: 100vh
+  position: relative
 
 .main
-	flex: 1
+  flex: 1
 
 html
-	font-size: 16px
+  font-size: 16px
+  text-size-adjust: 100%
 
 html, body
-	overflow-x: hidden
+  overflow-x: hidden
 
 button
-	cursor: pointer
+  cursor: pointer
 
 textarea
-	resize: none
+  resize: none
+  width: 100%
+  height: 100%
 
 input,
 textarea
-	font-family: sans-serif
-	font-size: 11px
-	color: #333
-
-.slick-slide:focus
-	outline: 0
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder
-	font-size: 11px
-	color: #999999
-	font-family: Arial
-
-input::-moz-placeholder,
-textarea::-moz-placeholder
-	font-size: 11px
-	color: #999999
-	font-family: Arial
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder
-	font-size: 11px
-	color: #999999
-	font-family: Arial
-
-input:-moz-placeholder,
-textarea:-moz-placeholder
-	font-size: 11px
-	color: #999999
-	font-family: Arial
+  font-family: sans-serif
+  font-size: 14px
+  color: #333
+  &::-webkit-input-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
+  &::-moz-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
+  &:-ms-input-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
+  &:-moz-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
 
 input[type="submit"]
-	cursor: pointer
+  cursor: pointer
 
 .container
-	width: 100%
-	max-width: 1170px
-	padding-left: 15px
-	padding-right: 15px
-	margin: 0 auto
+  width: 100%
+  max-width: 1170px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 0 auto
 
 .inline-flex
-	display: -webkit-inline-flex
-	display: -moz-inline-flex
-	display: -ms-inline-flex
-	display: -o-inline-flex
-	display: inline-flex
+  display: -webkit-inline-flex
+  display: -moz-inline-flex
+  display: -ms-inline-flex
+  display: -o-inline-flex
+  display: inline-flex
 
 .flex
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
 
 .ai-s
-	align-items: stretch
+  align-items: stretch
 
 .ai-c
-	align-items: center
+  align-items: center
 
 .ai-fs
-	align-items: flex-start
+  align-items: flex-start
 
 .ai-b
-	align-items: baseline
+  align-items: baseline
 
 .ai-fe
-	align-items: flex-end
+  align-items: flex-end
 
 .jc-sb
-	justify-content: space-between
+  justify-content: space-between
 
 .jc-sa
-	justify-content: space-around
+  justify-content: space-around
 
 .jc-fe
-	justify-content: flex-end
+  justify-content: flex-end
 
 .jc-fs
-	justify-content: flex-start
+  justify-content: flex-start
 
 .jc-c
-	justify-content: center
+  justify-content: center
 
 .fd-c
-	flex-direction: column
+  flex-direction: column
 
 .fw-w
-	flex-wrap: wrap
+  flex-wrap: wrap
 
 .btn
-	border: 0
-	background-color: transparent
-	font-family: sans-serif
+  border: 0
+  background-color: transparent
+  font-family: sans-serif
 
 .mobile-menu
-	opacity: 0
-	transition: 0.4s all ease-in
+  transition: $tr
+  display: none
 
 .form
-	&__group
-		&.has--error
-			.form__group-message
-				display: inline-block
-		&-input
-			display: block
-		&-message
-			font-size: .8em
-			color: red
-			display: none
+  &__group
+    position: relative
+    &.has--error
+      .form__group-message
+        display: inline-block
+    &-label
+      display: block
+    &-input
+      display: block
+    &-message
+      font-size: .8em
+      color: red
+      display: none
+      margin-top: .2rem
+
+.checkbox
+  position: relative
+  padding-left: 22px
+  cursor: pointer
+  display: inline-block
+  input
+    display: none
+    &:checked + span
+      &:before
+
+      &:after
+
+  span
+    transition: $tr
+    &:before
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr
+
+.radio
+  position: relative
+  padding-left: 22px
+  cursor: pointer
+  display: inline-block
+  input
+    display: none
+    &:checked + span
+      &:before
+
+      &:after
+  span
+    transition: $tr
+    &:before
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr
